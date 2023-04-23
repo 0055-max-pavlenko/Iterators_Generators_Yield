@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>39422dbf-85ab-499b-91cb-a0440f629751</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Iterators_Generators_Yield_2.py</StartupFile>
+    <StartupFile>Iterators_Generators_Yield_4.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

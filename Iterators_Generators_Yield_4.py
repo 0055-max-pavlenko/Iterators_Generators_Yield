@@ -1,19 +1,20 @@
 import types
 
 
-def flat_generator(list_of_list):
-    ...
-    yield
- 
- 
-def flatten(items, seqtypes=(list, tuple)):
+def flat_generator(list_of_lists):
     try:
-        for i, x in enumerate(items):
-            while isinstance(items[i], seqtypes):    
-                items[i:i+1] = items[i]
+        for i, x in enumerate(list_of_lists):
+            while isinstance(x, list):    
+                list_of_lists[i:i+1] = x
+                x = list_of_lists[i]
     except IndexError:
         pass
-    return items...
+
+    for item in list_of_lists:
+        yield item
+ 
+ 
+
 
 def test_4():
 
@@ -37,3 +38,12 @@ def test_4():
 
 if __name__ == '__main__':
     test_4()
+
+    my_test_list = [
+        [],
+        [1,2,3,'h'],
+        []
+    ]
+
+    for i in flat_generator(my_test_list):
+        print(i, end =',')

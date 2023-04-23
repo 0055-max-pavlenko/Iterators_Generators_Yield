@@ -30,4 +30,14 @@ def test_2():
 
 
 if __name__ == '__main__':
+
+    my_test_list = [
+        [],
+        [1,2,3,'a'],
+        []
+    ]
+
+    for i in flat_generator(my_test_list):
+        print(i, end =',')
+
     test_2()
