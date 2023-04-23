@@ -23,6 +23,8 @@
   <ItemGroup>
     <Compile Include="Iterators_Generators_Yield_1.py" />
     <Compile Include="Iterators_Generators_Yield_3.py" />
+    <Compile Include="Iterators_Generators_Yield_2.py" />
+    <Compile Include="Iterators_Generators_Yield_4.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
