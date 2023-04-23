@@ -1,4 +1,3 @@
-from functools import reduce
 
 class FlatIterator:
 
@@ -50,7 +49,7 @@ def test_3():
 if __name__ == '__main__':
     my_test_list = [
         [],
-        [1, 2, 3, 4],
+        [1, 2, 3, 4,'b'],
         []
     ]
 

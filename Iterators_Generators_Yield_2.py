@@ -2,10 +2,11 @@ import types
 
 
 def flat_generator(list_of_lists):
+    flat_list = [item for sublist in list_of_lists for item in sublist]
 
-    ...
-    yield
-    ...
+    for item in flat_list:
+        yield item
+    
 
 
 def test_2():
