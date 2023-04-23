@@ -1,4 +1,4 @@
-﻿from functools import reduce
+from functools import reduce
 
 class FlatIterator:
 
@@ -17,12 +17,17 @@ class FlatIterator:
     def __next__(self):
         if self.counter >= self.number_of_elements:
             raise StopIteration
-        item = self.list_of_lists[self.current_list][self.current_element]
-        self.current_element += 1
-        self.counter += 1
-        if self.current_element >= self.list_elements[self.current_list]:
+        if self.list_elements[self.current_list] == 0:
             self.current_element = 0
             self.current_list += 1
+            item = ''
+        else:
+            item = self.list_of_lists[self.current_list][self.current_element]
+            self.current_element += 1
+            self.counter += 1
+            if self.current_element >= self.list_elements[self.current_list]:
+                self.current_element = 0
+                self.current_list += 1
             
         return item
 
@@ -50,8 +55,8 @@ if __name__ == '__main__':
 
 
     my_test_list = [
-        ['a','b','c'],
-        [None],
+        [],
+        [],
         [1, 2]
     ]
 
@@ -59,6 +64,3 @@ if __name__ == '__main__':
         print(i, end =',')
      
     test_1()
-    
-
-    
